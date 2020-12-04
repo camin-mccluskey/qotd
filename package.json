@@ -1,0 +1,19 @@
+{
+  "name": "qotd",
+  "version": "1.0.0",
+  "description": "Random Quote of the Day Web Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Camin McCluskey",
+  "license": "ISC"
+}
