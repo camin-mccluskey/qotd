@@ -12,7 +12,7 @@ Random quote of the day service. Uses [They Said So Quotes API](https://quotes.r
 ```json
 {
   "quote": "Do or do not. There is no try.",
-  "author: "Yoda"
+  "author": "Yoda"
 }
 ```
 
