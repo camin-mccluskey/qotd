@@ -1,9 +1,25 @@
 version: "3.8"
 services:
-  quote-service:
+  qotd-service:
     build: 
       context: . # location of Dockerfile
-    image: quote:latest # named image
+    image: qotd-service:latest # named image
     ports:
       - 3000:3000
-  
+    deploy:
+      restart_policy:
+        condition: on-failure
+    depends_on:
+      - db
+  db:
+    image: redis
+    command: redis-server --appendonly yes
+    ports:
+      - 6379:6379
+    volumes:
+      - redis-data:/data
+    deploy:
+      restart_policy:
+        condition: on-failure
+volumes:
+  redis-data:
