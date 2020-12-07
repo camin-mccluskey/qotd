@@ -71,12 +71,12 @@ app.get('/saved', async (req, res) => {
 				res.send(`${quote} - ${author}`);
 			} else {
         console.error('no quotes available');
-				res.send('error - no quotes available. Add a quote by posting to /save');
+				res.status(404).send('error - no quotes available. Add a quote by posting to /save');
 			}	
 		});
 	} catch (e) {
 		console.error(e);
-		res.send("error");
+		res.status(500).send("error");
 	}
 });
 
@@ -87,10 +87,10 @@ app.post('/save', async (req, res) => {
 		if (resp === "OK") {
 			res.json({message: 'ok'});
 		} else {
-			res.json({message: 'err'});
+			res.status(500).json({message: 'err'});
 		}
 	} else {
-		res.json({message: 'bad request'});
+		res.status(400).json({message: 'bad request'});
 	}
 });
 
