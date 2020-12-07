@@ -2,11 +2,11 @@
 
 Random quote of the day service. Uses [They Said So Quotes API](https://quotes.rest/). The following endpoints are available
 
-| Method | Endpoint | Request | Response | 
-| ------ | -------- | ------- | -------- |
-| `GET`  | `/`      |         | `string` | 
-| `POST` | `/save`  | `json`<sup>*</sup>| `json`<sup>**</sup>|
-| `GET`  | `/saved` |         | `string` |
+| Method | Endpoint        | Request            | Response            | 
+| ------ | --------------- | ------------------ | ------------------- |
+| `GET`  | `/quotes`       |                    | `string`            |
+| `POST` | `/quotes`       | `json`<sup>*</sup> | `json`<sup>**</sup> |
+| `GET`  | `/quotes/saved` |                    | `string`            |
 
 <sup>*</sup>
 ```json
@@ -36,7 +36,7 @@ This will deploy a stack with the API on port `3000`.
 
 ## TODO 
 
-- [ ] Clean up API 
+- [x] Clean up API 
 - [ ] Add frontend design 
 - [ ] Create Dockerfile for non-ARM architectures
 - [ ] Tests and things

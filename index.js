@@ -50,7 +50,7 @@ const fetchQuote = async () => {
     });
 };
 
-app.get('/', async (req, res) => {
+app.get('/quotes', async (req, res) => {
 	const { author, quote } = await fetchQuote();
   if (author && quote) {
     res.send(`${quote} - ${author}`);
@@ -59,7 +59,7 @@ app.get('/', async (req, res) => {
   }
 });
 
-app.get('/saved', async (req, res) => {
+app.get('/quotes/saved', async (req, res) => {
   try {
 		const keys = await redisClient.keys('*')
 		const randInt = Math.floor(Math.random() * keys.length); 
@@ -71,7 +71,7 @@ app.get('/saved', async (req, res) => {
 				res.send(`${quote} - ${author}`);
 			} else {
         console.error('no quotes available');
-				res.status(404).send('error - no quotes available. Add a quote by posting to /save');
+				res.status(404).send('error - no quotes available. Add a quote by posting to /quotes');
 			}	
 		});
 	} catch (e) {
@@ -80,7 +80,7 @@ app.get('/saved', async (req, res) => {
 	}
 });
 
-app.post('/save', async (req, res) => {
+app.post('/quotes', async (req, res) => {
 	const { quote, author } = req.body;
 	if (quote && author) {
 		const resp = await redisClient.set(uuidv4(), JSON.stringify({ quote, author }));
@@ -95,5 +95,5 @@ app.post('/save', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Quote API listening at http://localhost:${port}`)
 });
