@@ -5,8 +5,24 @@ Random quote of the day service. Uses [They Said So Quotes API](https://quotes.r
 | Method | Endpoint | Request | Response | 
 | ------ | -------- | ------- | -------- |
 | `GET`  | `/`      |         | `string` | 
-| `POST` | `/save`  | ```json{"quote": string, "author": string} | ```json{message: string}``` |
+| `POST` | `/save`  | `json`<sup>*</sup>| `json`<sup>**</sup>|
 | `GET`  | `/saved` |         | `string` |
+
+<sup>*</sup>
+```json
+{
+  "quote": string,
+  "author: string
+}
+```
+
+<sup>**</sup>
+```json
+{
+  "message": string
+}
+```
+
 
 ## Running with Docker
 
