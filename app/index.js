@@ -8,9 +8,6 @@ const redisClient = new Redis("redis://db:6379");
 const app = express();
 const port = 3000;
 
-// serve static content at root
-app.use(express.static('public'));
-
 // parse json requests
 app.use(express.json());
 
