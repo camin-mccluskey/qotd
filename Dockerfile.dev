@@ -8,5 +8,5 @@ RUN npm install
 
 COPY index.js .
 
-CMD ["yarn", "start"] 
+CMD ["yarn", "run", "start:dev"] 
 

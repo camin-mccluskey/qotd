@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node index.js"
+    "start": "node index.js",
+		"start:dev": "nodemon index.js -L",
+    "docker:pi": "docker-compose up",
+    "docker:pi:dev": "docker-compose -f docker-compose.dev.yml up"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -17,5 +20,8 @@
     "node"
   ],
   "author": "Camin McCluskey",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
 }
