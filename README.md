@@ -11,15 +11,15 @@ Random quote of the day service. Uses [They Said So Quotes API](https://quotes.r
 <sup>*</sup>
 ```json
 {
-  "quote": string,
-  "author: string
+  "quote": "Do or do not. There is no try.",
+  "author: "Yoda"
 }
 ```
 
 <sup>**</sup>
 ```json
 {
-  "message": string
+  "message": "OK"
 }
 ```
 
