@@ -6,7 +6,7 @@ const Redis = require("ioredis");
 const redisClient = new Redis("redis://db:6379");
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 // parse json requests
 app.use(express.json());

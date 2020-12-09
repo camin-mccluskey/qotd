@@ -1,0 +1,12 @@
+
+version: "3.8"
+services:
+  qotd-client:
+    build: 
+      context: . # location of Dockerfile
+    image: qotd-client:latest # named image
+    ports:
+      - 3000:3000
+    deploy:
+      restart_policy:
+        condition: on-failure

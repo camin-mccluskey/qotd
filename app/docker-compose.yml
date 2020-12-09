@@ -5,7 +5,7 @@ services:
       context: . # location of Dockerfile
     image: qotd-service:latest # named image
     ports:
-      - 3000:3000
+      - 5000:5000
     deploy:
       restart_policy:
         condition: on-failure
