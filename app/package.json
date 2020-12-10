@@ -7,8 +7,8 @@
     "test": "jest",
     "start": "node index.js",
 		"start:dev": "nodemon index.js -L",
-    "docker:pi": "docker-compose up",
-    "docker:pi:dev": "docker-compose -f docker-compose.dev.yml up"
+    "start:pi": "docker-compose -f docker-compose.dev.yml up",
+    "start:macos": "docker-compose -f docker-commpose.macos.yml up"
   },
   "dependencies": {
     "express": "^4.17.1",
