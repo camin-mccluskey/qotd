@@ -24,7 +24,7 @@ Random quote of the day web app. Uses [They Said So Quotes API](https://quotes.r
 ```
 
 
-## Running with Docker
+## Running the Service(s)
 
 ### Server 
 
@@ -38,15 +38,28 @@ This will deploy a stack with the API on port `5000`.
 
 ### Client
 
-The client can be run outside Docker if necessary. To run with Docker.
+The client can be run outside Docker if necessary. To do so, run:
 
 ```bash
-$ cd client && npm run start:<env>
+$ cd client && npm start
+```
+To run with Docker:
+
+```bash
+$ cd client && docker-compose -f docker-compose.<env>.yml up
 ```
 
 This will deloy a React site on port `3000`.
 
 `env` is either `pi` for ARM architectures or `macos` for Intel/AMD.
+
+### Combined Service
+
+To run the entire service together. This will run a Docker stack.
+
+```bash
+$ npm run start:<env>
+```
 
 ## TODO 
 
