@@ -1,4 +1,4 @@
-{
+
   "name": "qotd-api",
   "version": "1.0.0",
   "description": "Random Quote of the Day Web Server",
@@ -7,7 +7,7 @@
     "test": "jest",
     "start": "node index.js",
 		"start:dev": "nodemon index.js -L",
-    "start:pi": "docker-compose -f docker-compose.dev.yml up",
+    "start:pi": "docker-compose -f docker-compose.pi.yml up",
     "start:macos": "docker-compose -f docker-commpose.macos.yml up"
   },
   "dependencies": {

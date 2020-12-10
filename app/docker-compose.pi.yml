@@ -3,7 +3,7 @@ services:
   qotd-service:
     build: 
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     image: qotd-service:latest # named image
     volumes: # expose underlying file changes to container for hot reloading 
       - ./:/app
