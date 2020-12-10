@@ -1,0 +1,23 @@
+{
+  "name": "qotd",
+  "version": "1.0.0",
+  "description": "Random Quote of the Day Web App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "docker-compose -f app/docker-compose.yml -f client/docker-compose.yml up"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camin-mccluskey/qotd.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Camin McCluskey <mccluskey.camin@gmail.com> (https://camin-mccluskey.github.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camin-mccluskey/qotd/issues"
+  },
+  "homepage": "https://github.com/camin-mccluskey/qotd#readme"
+}
