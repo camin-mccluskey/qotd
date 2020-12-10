@@ -3,6 +3,7 @@ services:
   qotd-service:
     build: 
       context: . # location of Dockerfile
+      dockerfile: Dockerfile.macos
     image: qotd-service:latest # named image
     ports:
       - 5000:5000

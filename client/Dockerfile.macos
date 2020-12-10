@@ -1,4 +1,4 @@
-FROM balenalib/raspberry-pi-alpine-node:latest
+FROM mhart/alpine-node:12
 
 WORKDIR client 
 

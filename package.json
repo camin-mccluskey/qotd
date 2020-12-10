@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "docker-compose -f app/docker-compose.yml -f client/docker-compose.yml up"
+    "start:pi": "docker-compose -p qotd-web-app -f app/docker-compose.pi.yml -f client/docker-compose.pi.yml up",
+    "start:macos": "docker-compose -p qotd-web-app -f app/docker-compose.macos.yml -f client/docker-compose.macos.yml up"
   },
   "repository": {
     "type": "git",
